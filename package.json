@@ -4,6 +4,7 @@
   "description": "swapi.co in node js",
   "main": "server.js",
   "scripts": {
+    "start": "npm install && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
