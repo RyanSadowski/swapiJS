@@ -173,6 +173,84 @@ router.route('/species')
   });
 });
 
+router.route('/starships')
+// get all the people (accessed at GET http://localhost:8080/api/people)
+.get(function(req, res) {
+  Starships.find(function(err, starships) {
+    if (err)
+      res.send(err);
+
+    res.json(starships);
+  });
+})
+// create a film (accessed at POST http://localhost:8080/api/film)
+.post(function(req, res) {
+  var starships = new Starships();
+  starships.name                    = req.body.name;
+  starships.model                   = req.body.model;
+  starships.starship_class          = req.body.starship_class;
+  starships.manufacturer            = req.body.manufacturer;
+  starships.cost_in_credits         = req.body.cost_in_credits;
+  starships.length                  = req.body.length;
+  starships.crew                    = req.body.crew;
+  starships.passengers              = req.body.passengers;
+  starships.max_atmosphering_speed  = req.body.max_atmosphering_speed;
+  starships.hyperdrive_rating       = req.body.hyperdrive_rating;
+  starships.mglt                    = req.body.mglt;
+  starships.cargo_capacity          = req.body.cargo_capacity;
+  starships.consumables             = req.body.consumables;
+  starships.films                   = req.body.films;
+  starships.pilots                  = req.body.pilots;
+  starships.url                     = req.body.url;
+  starships.created                 = req.body.created;
+  starships.edited                  = req.body.edited;
+  // save the film and check for errors
+  starships.save(function(err) {
+    if (err)
+    res.send(err);
+
+    res.json({ message: 'starship created!' });
+  });
+});
+
+router.route('/vehicles')
+// get all the people (accessed at GET http://localhost:8080/api/people)
+.get(function(req, res) {
+  Vehicles.find(function(err, vehicles) {
+    if (err)
+      res.send(err);
+
+    res.json(vehicles);
+  });
+})
+// create a film (accessed at POST http://localhost:8080/api/film)
+.post(function(req, res) {
+  var vehicles = new Vehicles();
+  vehicles.name                    = req.body.name;
+  vehicles.model                   = req.body.model;
+  vehicles.vehicle_class           = req.body.vehicle_class;
+  vehicles.manufacturer            = req.body.manufacturer;
+  vehicles.cost_in_credits         = req.body.cost_in_credits;
+  vehicles.length                  = req.body.length;
+  vehicles.crew                    = req.body.crew;
+  vehicles.passengers              = req.body.passengers;
+  vehicles.max_atmosphering_speed  = req.body.max_atmosphering_speed;
+  vehicles.cargo_capacity          = req.body.cargo_capacity;
+  vehicles.consumables             = req.body.consumables;
+  vehicles.films                   = req.body.films;
+  vehicles.pilots                  = req.body.pilots;
+  vehicles.url                     = req.body.url;
+  vehicles.created                 = req.body.created;
+  vehicles.edited                  = req.body.edited;
+  // save the film and check for errors
+  vehicles.save(function(err) {
+    if (err)
+    res.send(err);
+
+    res.json({ message: 'vehicles created!' });
+  });
+});
+
 
 
 app.use('/api', router);
