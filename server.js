@@ -70,7 +70,7 @@ router.route('/people')
 app.use('/api', router);
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI || config.database);
+mongoose.connect(process.env.MONGODB_URI || config.database)
 .then(() => console.log('Connected to DeathStar aka DB'))
 .catch((err) => console.error(err));
 
