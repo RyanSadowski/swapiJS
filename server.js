@@ -7,7 +7,8 @@ Films             = require('./models/films'),
 Planets           = require('./models/planets'),
 Species           = require('./models/species'),
 Starships         = require('./models/starships'),
-Vehicles          = require('./models/vehicles');
+Vehicles          = require('./models/vehicles'),
+config            = require('./config'); // get our config file
 
 var app = express();
 app.use(bodyParser());
@@ -69,7 +70,7 @@ router.route('/people')
 app.use('/api', router);
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/swapi')
+mongoose.connect(process.env.MONGODB_URI || config.database);
 .then(() => console.log('Connected to DeathStar aka DB'))
 .catch((err) => console.error(err));
 
