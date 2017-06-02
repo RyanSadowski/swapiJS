@@ -62,6 +62,44 @@ router.route('/films')
   });
 });
 
+router.route('/planets')
+// get all the people (accessed at GET http://localhost:8080/api/people)
+.get(function(req, res) {
+  Planets.find(function(err, planets) {
+    if (err)
+      res.send(err);
+
+    res.json(planets);
+  });
+})
+// create a film (accessed at POST http://localhost:8080/api/film)
+.post(function(req, res) {
+  var planet = new Planets();
+  planet.name             = req.body.name;
+  planet.diameter         = req.body.diameter;
+  planet.rotation_period  = req.body.rotation_period;
+  planet.orbital_period   = req.body.orbital_period;
+  planet.gravity          = req.body.gravity;
+  planet.population       = req.body.population;
+  planet.climate          = req.body.climate;
+  planet.terrain          = req.body.terrain;
+  planet.surface_water    = req.body.surface_water;
+  planet.films            = req.body.films;
+  planet.residents        = req.body.residents;
+  planet.url              = req.body.url;
+  planet.created          = req.body.created;
+  planet.edited           = req.body.edited;
+  // save the film and check for errors
+  planet.save(function(err) {
+    if (err)
+    res.send(err);
+
+    res.json({ message: 'film created!' });
+  });
+});
+
+
+
 
 router.route('/people')
 // get all the people (accessed at GET http://localhost:8080/api/people)
