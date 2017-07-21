@@ -26,8 +26,8 @@ router.get('/', function(req, res) {
   res.json({
     message: 'hola',
     status: 1,
-    meetingOver: '17-01-2016T08:44:29',
-    nextMeeting: '17-01-2016T18:44:29'
+    meetingOver: '2017-07-21T08:59',
+    nextMeeting: '2017-07-21T09:30'
  });
 });
 
