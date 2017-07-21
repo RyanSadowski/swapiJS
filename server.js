@@ -23,7 +23,12 @@ router.use(function(req, res, next) {
 });
 
 router.get('/', function(req, res) {
-  res.json({ message: 'Please see API documentation' });
+  res.json({
+    message: 'hola',
+    status: 1,
+    meetingOver: '17-01-2016 08:44:29',
+    nextMeeting: '17-01-2016 18:44:29'
+ });
 });
 
 router.route('/films')
