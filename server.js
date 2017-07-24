@@ -22,14 +22,62 @@ router.use(function(req, res, next) {
   next(); // make sure we go to the next routes and don't stop here
 });
 
-router.get('/', function(req, res) {
+// router.get('/', function(req, res) {
+//   res.json({
+//     message: 'hola',
+//     status: 1,
+//     meetingOver: '2017-07-21T08:59',
+//     nextMeeting: '2017-07-21T09:30'
+//  });
+// });     //For hackathon lol
+
+router.get('/agencies', function(req, res) {
   res.json({
-    message: 'hola',
-    status: 1,
-    meetingOver: '2017-07-21T08:59',
-    nextMeeting: '2017-07-21T09:30'
- });
-});
+    'global':{
+      'numLogins':19,
+      'numChallenges':0,
+      'eventBreakdown': {
+        "LoginProtectionAllowBoundUsers":19
+      }
+    },
+    'fake1':{
+      'numLogins':19,
+      'numChallenges':0,
+      'eventBreakdown': {
+        "LoginProtectionAllowBoundUsers":19
+      },
+      'fake2':{
+      'numLogins':19,
+      'numChallenges':0,
+      'eventBreakdown': {
+        "LoginProtectionAllowBoundUsers":19
+      }
+    },
+    'fake3':{
+      'numLogins':19,
+      'numChallenges':0,
+      'eventBreakdown': {
+        "LoginProtectionAllowBoundUsers":19
+      }
+    },
+    'fake4':{
+      'numLogins':19,
+      'numChallenges':0,
+      'eventBreakdown': {
+        "LoginProtectionAllowBoundUsers":19
+      }
+    },
+    'fake5':{
+      'numLogins':19,
+      'numChallenges':0,
+      'eventBreakdown': {
+        "LoginProtectionAllowBoundUsers":19
+      }
+    }
+    }
+  })
+}); //to test agencies before the real API is done
+
 
 router.route('/films')
 // get all the people (accessed at GET http://localhost:8080/api/people)
