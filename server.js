@@ -34,42 +34,42 @@ router.use(function(req, res, next) {
 router.get('/agencies', function(req, res) {
   res.json({
     'global':{
-      'numLogins':19,
-      'numChallenges':0,
+      'numLogins':20,
+      'numChallenges':1,
       'eventBreakdown': {
         "LoginProtectionAllowBoundUsers":19
       }
     },
     'fake1':{
-      'numLogins':19,
-      'numChallenges':0,
+      'numLogins':100,
+      'numChallenges':5,
       'eventBreakdown': {
         "LoginProtectionAllowBoundUsers":19
       },
       'fake2':{
-      'numLogins':19,
-      'numChallenges':0,
+      'numLogins':200,
+      'numChallenges':3,
       'eventBreakdown': {
         "LoginProtectionAllowBoundUsers":19
       }
     },
     'fake3':{
-      'numLogins':19,
-      'numChallenges':0,
+      'numLogins':150,
+      'numChallenges':2,
       'eventBreakdown': {
         "LoginProtectionAllowBoundUsers":19
       }
     },
     'fake4':{
-      'numLogins':19,
-      'numChallenges':0,
+      'numLogins':900,
+      'numChallenges':20,
       'eventBreakdown': {
         "LoginProtectionAllowBoundUsers":19
       }
     },
     'fake5':{
-      'numLogins':19,
-      'numChallenges':0,
+      'numLogins':400,
+      'numChallenges':300,
       'eventBreakdown': {
         "LoginProtectionAllowBoundUsers":19
       }
