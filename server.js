@@ -45,6 +45,7 @@ router.get('/agencies', function(req, res) {
       'numChallenges':5,
       'eventBreakdown': {
         "LoginProtectionAllowBoundUsers":19
+        }
       },
       'fake2':{
       'numLogins':200,
@@ -73,7 +74,6 @@ router.get('/agencies', function(req, res) {
       'eventBreakdown': {
         "LoginProtectionAllowBoundUsers":19
       }
-    }
     }
   })
 }); //to test agencies before the real API is done
