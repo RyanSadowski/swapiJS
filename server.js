@@ -33,49 +33,58 @@ router.use(function(req, res, next) {
 
 router.get('/agencies', function(req, res) {
   res.json({
-    'global':{
-      'numLogins':20,
-      'numChallenges':1,
-      'eventBreakdown': {
-        "LoginProtectionAllowBoundUsers":19
-      }
-    },
-    'fake1':{
-      'numLogins':100,
-      'numChallenges':5,
-      'eventBreakdown': {
-        "LoginProtectionAllowBoundUsers":19
+      "data":[
+        {
+        "name": "global",
+        "numLogins":2000,
+        "numChallenges":200,
+        "eventBreakdown": {
+          "LoginProtectionAllowBoundUsers":19
         }
       },
-      'fake2':{
-      'numLogins':200,
-      'numChallenges':3,
-      'eventBreakdown': {
-        "LoginProtectionAllowBoundUsers":19
+      {
+        "name": "fake1",
+        "numLogins":235,
+        "numChallenges":100,
+        "eventBreakdown": {
+          "LoginProtectionAllowBoundUsers":19
+        }
+      },
+      {
+        "name": "fake2",
+        "numLogins":65,
+        "numChallenges":1,
+        "eventBreakdown": {
+          "LoginProtectionAllowBoundUsers":19
+        }
+      },
+      {
+        "name": "fake3",
+        "numLogins":900,
+        "numChallenges":55,
+        "eventBreakdown": {
+          "LoginProtectionAllowBoundUsers":19
+        }
+      },
+      {
+        "name": "fake4",
+        "numLogins":300,
+        "numChallenges":14,
+        "eventBreakdown": {
+          "LoginProtectionAllowBoundUsers":19
+        }
+      },
+      {
+        "name": "fake5",
+        "numLogins":200,
+        "numChallenges":10,
+        "eventBreakdown": {
+          "LoginProtectionAllowBoundUsers":19
+        }
       }
-    },
-    'fake3':{
-      'numLogins':150,
-      'numChallenges':2,
-      'eventBreakdown': {
-        "LoginProtectionAllowBoundUsers":19
-      }
-    },
-    'fake4':{
-      'numLogins':900,
-      'numChallenges':20,
-      'eventBreakdown': {
-        "LoginProtectionAllowBoundUsers":19
-      }
-    },
-    'fake5':{
-      'numLogins':400,
-      'numChallenges':300,
-      'eventBreakdown': {
-        "LoginProtectionAllowBoundUsers":19
-      }
-    }
-  })
+      ],
+  "status":"Okay!"
+})
 }); //to test agencies before the real API is done
 
 
