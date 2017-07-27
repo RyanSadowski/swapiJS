@@ -33,58 +33,110 @@ router.use(function(req, res, next) {
 
 router.get('/agencies', function(req, res) {
   res.json({
-      "data":[
-        {
-        "name": "global",
-        "numLogins":2000,
-        "numChallenges":200,
-        "eventBreakdown": {
-          "LoginProtectionAllowBoundUsers":19
-        }
+    "McGriff":{
+      "numLogins":1,
+      "numChallenges":1,
+      "eventBreakdown":{
+        "LogonProtection-UnBoundUser-Challenge":1
       },
-      {
-        "name": "fake1",
-        "numLogins":235,
-        "numChallenges":100,
-        "eventBreakdown": {
-          "LoginProtectionAllowBoundUsers":19
-        }
-      },
-      {
-        "name": "fake2",
-        "numLogins":65,
-        "numChallenges":1,
-        "eventBreakdown": {
-          "LoginProtectionAllowBoundUsers":19
-        }
-      },
-      {
-        "name": "fake3",
-        "numLogins":900,
-        "numChallenges":55,
-        "eventBreakdown": {
-          "LoginProtectionAllowBoundUsers":19
-        }
-      },
-      {
-        "name": "fake4",
-        "numLogins":300,
-        "numChallenges":14,
-        "eventBreakdown": {
-          "LoginProtectionAllowBoundUsers":19
-        }
-      },
-      {
-        "name": "fake5",
-        "numLogins":200,
-        "numChallenges":10,
-        "eventBreakdown": {
-          "LoginProtectionAllowBoundUsers":19
-        }
-      }
-      ],
-  "status":"Okay!"
-})
+      "rate":1.0},
+      "Cochrane":{
+        "numLogins":10,
+        "numChallenges":2,
+        "eventBreakdown":{
+          "LogonProtection-UnBoundUser-Challenge":4,
+          "LoginProtection-AllowBoundUsers":6
+        },
+        "rate":0.2},
+        "Pacific Excess":{
+          "numLogins":9,
+          "numChallenges":1,
+          "eventBreakdown":{
+            "LogonProtection-UnBoundUser-Challenge":1,
+            "LoginProtection-AllowBoundUsers":8
+          },
+          "rate":0.1111111111111111},
+          "CRC":{
+            "numLogins":10,
+            "numChallenges":1,
+            "eventBreakdown":{
+              "LogonProtection-UnBoundUser-Challenge":3,
+              "LoginProtection-AllowBoundUsers":7
+            },
+            "rate":0.1},
+          "E&S":{
+            "numLogins":16,
+            "numChallenges":1,
+            "eventBreakdown":{
+              "LogonProtection-UnBoundUser-Challenge":9,
+              "LoginProtection-AllowBoundUsers":7
+            },
+              "rate":0.0625},
+              "global":{
+                "numLogins":123,
+                "numChallenges":6,
+                "eventBreakdown":{
+                  "LogonProtection-UnBoundUser-Challenge":24,
+                  "LoginProtection-AllowBoundUsers":99
+                },
+                "rate":0.04878048780487805}})
+
+
+
+
+
+  //     "data":[
+  //       {
+  //       "name": "global",
+  //       "numLogins":2000,
+  //       "numChallenges":200,
+  //       "eventBreakdown": {
+  //         "LoginProtectionAllowBoundUsers":19
+  //       }
+  //     },
+  //     {
+  //       "name": "fake1",
+  //       "numLogins":235,
+  //       "numChallenges":100,
+  //       "eventBreakdown": {
+  //         "LoginProtectionAllowBoundUsers":19
+  //       }
+  //     },
+  //     {
+  //       "name": "fake2",
+  //       "numLogins":65,
+  //       "numChallenges":1,
+  //       "eventBreakdown": {
+  //         "LoginProtectionAllowBoundUsers":19
+  //       }
+  //     },
+  //     {
+  //       "name": "fake3",
+  //       "numLogins":900,
+  //       "numChallenges":55,
+  //       "eventBreakdown": {
+  //         "LoginProtectionAllowBoundUsers":19
+  //       }
+  //     },
+  //     {
+  //       "name": "fake4",
+  //       "numLogins":300,
+  //       "numChallenges":14,
+  //       "eventBreakdown": {
+  //         "LoginProtectionAllowBoundUsers":19
+  //       }
+  //     },
+  //     {
+  //       "name": "fake5",
+  //       "numLogins":200,
+  //       "numChallenges":10,
+  //       "eventBreakdown": {
+  //         "LoginProtectionAllowBoundUsers":19
+  //       }
+  //     }
+  //     ],
+  // "status":"Okay!"
+
 }); //to test agencies before the real API is done
 
 
